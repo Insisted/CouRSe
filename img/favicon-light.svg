@@ -1,0 +1,15 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 1485" width="3000" height="1485">
+	<title>vecteezy_simple-r-and-s-logo-illustration-suitable-for-brand-logos_9889823-ai</title>
+	<defs>
+		<radialGradient id="g1" cx="1500.2" cy="742.3" r="1499.8" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#000000"/>
+			<stop offset="1" stop-color="#000000"/>
+		</radialGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+	</style>
+	<g id="Layer 1">
+		<path id="&lt;Path&gt;" class="s0" d="m3000 0.5v6.2l-172.8 170.1h-1059.9v341.7h712.6l-179.2 176.3-676.6 665.7-125.7 123.7-125.7-123.7-671-660.3-179.2-176.3h710.5v-347.1h-1063.3l-169.4-166.7v-9.6h1409v699.7h-456.3l545.4 536.7 550.9-542.1h-458.3v-694.3z"/>
+	</g>
+</svg>

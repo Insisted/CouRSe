@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CouRSe - Rio and Steven Course</title>
+    <link rel="icon" type='image/svg' href='img/favicon.svg' media='(prefers-color-scheme: light)' />
+    <link rel="icon" type='image/svg' href='img/favicon-light.svg' media='(prefers-color-scheme: dark)' />
+</head>
+
+<body>
+    <nav>
+        <a href="#"><img src='img/favicon.svg' style='height: 4vh; align-self: center; justify-self: center;' /></a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div id="containers">
+
+        <div id="headers">
+            <div id='titles'><img src='img/favicon.svg' /></div>
+            <div id="red_block"></div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+<style>
+    #headers {
+        background-color: rgb(235, 235, 235);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    #containers {
+        padding: 5vh;
+        height: 90vh;
+    }
+
+    #titles {
+        width: 40rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        transition: 1s cubic-bezier(.4, .34, .62, 1);
+    }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        scroll-behavior: smooth;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #red_block {
+        background-color: rgba(255, 88, 81, 255);
+        height: 100%;
+        width: 100%;
+        position: static;
+        transition: 1s cubic-bezier(.55, 0, .44, 1);
+    }
+
+    nav {
+        display: grid;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        grid-template-columns: 3fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+        z-index: 999;
+        padding: 0 5vh 0 5vh;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+<script>
+    document.documentElement.scrollTop = 0;
+
+    const rb_style = document.getElementById('red_block').style;
+    const tt_style = document.getElementById('titles').style;
+    const head_style = document.getElementById('headers').style;
+
+    document.onreadystatechange = () => setTimeout(function () {
+        rb_style.transform = `translateX(-50%)`;
+        tt_style.transform = `translateX(-50%) scale(0.5)`;
+    }, 200);
+
+
+    window.addEventListener('scroll', (event) => {
+        let tr_x = `translateX(${!!window.scrollY ? '' : '-'}50%)`;
+
+        rb_style.transform = tr_x;
+
+    });
+</script>
+
+</html>
