@@ -10,7 +10,7 @@
     <link rel="icon" type='image/svg' href='favicon-light.svg' media='(prefers-color-scheme: dark)' />
 </head>
 
-<body>
+<body id="top">
     <nav>
         <a href="#"><img src='favicon.svg' style='height: 4vh;' /></a>
         <a href="#">Home</a>
@@ -29,11 +29,33 @@
             <div id='logos'><img src='favicon.svg' /></div>
             <!-- <div id="red_block"></div> -->
         </div>
+
     </div>
+    
     <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="go_top"><a href='#top'>↑</a></div>
 </body>
 
 <style>
+    #go_top {
+        width: 5vh;
+        font-size: 4vh;
+        aspect-ratio: 1/1;
+        position: fixed;
+        right: 2vh;
+        bottom: 2vh;
+        z-index: 9999999;
+        background-color: rgb(235, 235, 235);
+        text-align: center;
+        border-radius: 50%;
+        display: grid;
+    }
+
+    #go_top a {
+        color: black;
+        text-decoration: none;
+    }
+
     @font-face {
         font-family: "sharp_font";
         src: url("font/Sharp Font/Sharp.ttf");
@@ -85,7 +107,7 @@
         top: 50%;
         left: 50%;
         z-index: 3;
-        transition: 1s cubic-bezier(.4, .34, .62, 1);
+        transition: 1s cubic-bezier(.36,.08,.27,.86);
     }
 
     * {
@@ -156,12 +178,9 @@
         ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
 
         setTimeout(function () {
-
             st_style.display = '';
-            body_style.overflowY = 'unset';
-            body_style.position = 'unset';
-            body_style.width = 'unset'
-        }, 800);
+            body_style.overflowY = body_style.position = body_style.width = ll_style.transition = 'unset';
+        }, 1000);
     }, 200);
 
 
