@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CouRSe - Rio and Steven Course</title>
-    <link rel="icon" type='image/svg' href='img/favicon.svg' media='(prefers-color-scheme: light)' />
-    <link rel="icon" type='image/svg' href='img/favicon-light.svg' media='(prefers-color-scheme: dark)' />
+    <link rel="icon" type='image/svg' href='favicon.svg' media='(prefers-color-scheme: light)' />
+    <link rel="icon" type='image/svg' href='favicon-light.svg' media='(prefers-color-scheme: dark)' />
 </head>
 
 <body>
     <nav>
-        <a href="#"><img src='img/favicon.svg' style='height: 4vh;' /></a>
+        <a href="#"><img src='favicon.svg' style='height: 4vh;' /></a>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
@@ -21,12 +21,12 @@
 
         <div id="headers">
             <div id="left-text" class="side">
-                <h2 class="ha2">Let's Get Going With Rio</h2>
+                <h2 class="ha2">Let's Get Going With <span class="sharp-font">Rio</span></h2>
             </div>
             <div id="right-text" class="side">
-                <h2 class="ha2">Let's Get Going With Steven</h2>
+                <h2 class="ha2" id="steven">Let's Get Going With <span class="sharp-font">Steven</span></h2>
             </div>
-            <div id='logos'><img src='img/favicon.svg' /></div>
+            <div id='logos'><img src='favicon.svg' /></div>
             <!-- <div id="red_block"></div> -->
         </div>
     </div>
@@ -34,10 +34,22 @@
 </body>
 
 <style>
+    @font-face {
+        font-family: "sharp_font";
+        src: url("font/Sharp Font/Sharp.ttf");
+        src: url("font/Sharp Font/sharp-webfont.woff") format("woff"),
+            url("font/Sharp Font/sharp-webfont.woff2") format("woff2")
+    }
+
     #left-text {
         background-color: rgb(235, 235, 235);
         z-index: 1;
         width: 0%;
+    }
+
+    .sharp-font {
+        font-family: sharp_font, Rubik, sans-serif;
+        font-size: 12vh;
     }
 
     #right-text {
@@ -46,16 +58,12 @@
 
     .side {
         height: 100%;
+        width: 100%;
         display: grid;
         place-items: center;
         overflow: hidden;
         position: absolute;
-    }
-    
-    .side .ha2 {
-        font-size: 8vw;
-        margin: 0px 15vw;
-        width: 70vw;
+        transition: 1s cubic-bezier(.55, 0, .44, 1);
     }
 
     #headers {
@@ -84,8 +92,7 @@
         margin: 0px;
         padding: 0px;
         scroll-behavior: smooth;
-        font-family: "Rubik", sans-serif;
-        transition: 1s cubic-bezier(.55, 0, .44, 1);
+        font-family: Rubik, sans-serif;
     }
 
     #red_block {
@@ -116,23 +123,45 @@
         z-index: 999;
         padding: 0 5vh 0 5vh;
     }
+
+    .side .ha2 {
+
+        margin: 0px 15vw;
+        font-size: 8vw;
+        width: 70vw;
+    }
+
+    body {
+        position: fixed;
+        overflow-y: scroll;
+        width: 100%;
+    }
 </style>
 <script>
     document.documentElement.scrollTop = 0;
 
+
     // const rb_style = document.getElementById('red_block').style;
+    const body_style = document.getElementsByTagName('body')[0].style;
     const ll_style = document.getElementById('logos').style;
     const head_style = document.getElementById('headers').style;
     const left_style = document.getElementById('left-text').style;
-    const ha2_style = document.getElementsByClassName('ha2').style
+    const st_style = document.getElementById('steven').style;
+    st_style.display = 'none';
 
     document.onreadystatechange = () => setTimeout(function () {
         // rb_style.width = `50%`;
+
         left_style.width = '100%';
-        ll_style.transform = `translateX(-50%) scale(0.4)`;
-        
+        ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
+
         setTimeout(function () {
-        }(), 800);
+
+            st_style.display = '';
+            body_style.overflowY = 'unset';
+            body_style.position = 'unset';
+            body_style.width = 'unset'
+        }, 800);
     }, 200);
 
 
