@@ -76,16 +76,39 @@
       </div>
     </div>
 
+    <div id="content">
+      <h2>Kursus Yang Kami Tawarkan</h2>
+    </div>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <div id="go_top"><a href="#top">↑</a></div>
   </body>
 
   <style>
+#content {
+  
+  padding: 5vh;
+  text-align: center;
+}
+
+#content h2 {
+  font-size: 5vw;
+}
+
+    @keyframes pulse_top {
+      0% {
+        box-shadow: rgba(255, 88, 81, 255) 0 0 0 0;
+      }
+
+      100% {
+        box-shadow: rgba(235, 235, 235, 0) 0 0 0 16px;
+      }
+    }
     #go_top {
       width: 5vh;
       font-size: 4vh;
       aspect-ratio: 1/1;
+      opacity: 0;
       position: fixed;
       right: 2vh;
       bottom: 2vh;
@@ -94,6 +117,7 @@
       text-align: center;
       border-radius: 50%;
       display: grid;
+      animation: pulse_top 1.5s infinite;
     }
 
     #go_top a {
@@ -269,8 +293,8 @@
     }
 
     body {
-      position: fixed;
-      overflow-y: scroll;
+      /* position: fixed; */
+      /* overflow-y: scroll; */
       width: 100%;
     }
   </style>
@@ -285,6 +309,7 @@
     const st_style = document.getElementById("steven").style;
     const st_png_style = document.getElementById("steven_png").style;
     const l_scroll_style = document.getElementById("logos_scroll").style;
+    const go_top_style = document.getElementById("go_top").style;
     st_style.display = st_png_style.display = "none";
 
     document.onreadystatechange = () =>
@@ -305,12 +330,13 @@
       }, 200);
 
     window.addEventListener("scroll", (event) => {
-      let widths = !!window.scrollY ? 0 : 100;
-      left_style.width = widths + "%";
-      st_png_style.right = widths ? "0" : "100%";
-      l_scroll_style.color = widths
+      let cek = !!window.scrollY ? 0 : 100;
+      left_style.width = cek + "%";
+      st_png_style.right = cek ? "0" : "100%";
+      l_scroll_style.color = cek
         ? "rgba(255, 88, 81, 255)"
         : "rgb(235, 235, 235)";
+      go_top_style.opacity = cek ? "0" : "1";
     });
   </script>
 </html>
