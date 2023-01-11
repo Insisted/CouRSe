@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CouRSe - Rio and Steven Course</title>
-    <link rel="icon" type="image/svg" href="favicon.svg" media="(prefers-color-scheme: light)" />
-    <link rel="icon" type="image/svg" href="favicon-light.svg" media="(prefers-color-scheme: dark)" />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="favicon.svg"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/svg"
+      href="favicon-light.svg"
+      media="(prefers-color-scheme: dark)"
+    />
     <!-- Bootstrap CSS v5.2.1
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -28,213 +37,244 @@
     ></script> -->
 
     <script src="jquery-3.6.3.min.js"></script>
-</head>
+  </head>
 
-<body id="top">
+  <body id="top">
     <nav id="naved">
-        <a href="#"><img src="favicon.svg" style="height: 4vh" /></a>
-        <a href="#" class="nav_link">Home</a>
-        <a href="#" class="nav_link">About</a>
-        <a href="#" class="nav_link">Log In</a>
+      <a href="#"><img src="favicon.svg" style="height: 4vh" /></a>
+      <a href="#" class="nav_link">Home</a>
+      <a href="#" class="nav_link">About</a>
+      <a href="#" class="nav_link">Log In</a>
     </nav>
     <div id="containered">
-        <div id="headers">
-            <div id="left-text" class="side">
-                <h2 class="ha2">
-                    Let's Get Going With
-                    <span class="sharp-font" style="color: rgba(255, 88, 81, 255)">Rio</span>
-                </h2>
-                <img src="image/Rio.png" id="rio_png" class="png_guru" />
-            </div>
-            <div id="right-text" class="side">
-                <h2 class="ha2" id="steven">
-                    Let's Get Going With
-                    <span class="sharp-font" style="color: rgb(235, 235, 235)">Steven</span>
-                </h2>
-                <img src="image/Steven.png" id="steven_png" class="png_guru" />
-            </div>
-            <div id="logos"><img src="favicon.svg" /></div>
-            <!-- <div id="red_block"></div> -->
+      <div id="headers">
+        <div id="left-text" class="side">
+          <h2 class="ha2">
+            Let's Get Going With
+            <span class="sharp-font" style="color: rgba(255, 88, 81, 255)"
+              >Rio</span
+            >
+          </h2>
+          <img src="image/Rio.png" id="rio_png" class="png_guru" />
         </div>
+        <div id="right-text" class="side">
+          <h2 class="ha2" id="steven">
+            Let's Get Going With
+            <span class="sharp-font" style="color: rgb(235, 235, 235)"
+              >Steven</span
+            >
+          </h2>
+          <img src="image/Steven.png" id="steven_png" class="png_guru" />
+        </div>
+        <div id="logos">
+          <a href="#top" draggable="false" id="logos_scroll">Scroll</a>
+          <a href="#top" draggable="false"
+            ><img src="favicon.svg" draggable="false"
+          /></a>
+        </div>
+        <!-- <div id="red_block"></div> -->
+      </div>
     </div>
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <div id="go_top"><a href="#top">↑</a></div>
-</body>
+  </body>
 
-<style>
+  <style>
     #go_top {
-        width: 5vh;
-        font-size: 4vh;
-        aspect-ratio: 1/1;
-        position: fixed;
-        right: 2vh;
-        bottom: 2vh;
-        z-index: 9999999;
-        background-color: rgb(235, 235, 235);
-        text-align: center;
-        border-radius: 50%;
-        display: grid;
+      width: 5vh;
+      font-size: 4vh;
+      aspect-ratio: 1/1;
+      position: fixed;
+      right: 2vh;
+      bottom: 2vh;
+      z-index: 9999999;
+      background-color: rgb(235, 235, 235);
+      text-align: center;
+      border-radius: 50%;
+      display: grid;
     }
 
     #go_top a {
-        color: black;
-        text-decoration: none;
+      color: black;
+      text-decoration: none;
     }
 
     @font-face {
-        font-family: "sharp_font";
-        src: url("font/Sharp Font/Sharp.ttf");
-        src: url("font/Sharp Font/sharp-webfont.woff") format("woff"),
-            url("font/Sharp Font/sharp-webfont.woff2") format("woff2");
+      font-family: "sharp_font";
+      src: url("font/Sharp Font/Sharp.ttf");
+      src: url("font/Sharp Font/sharp-webfont.woff") format("woff"),
+        url("font/Sharp Font/sharp-webfont.woff2") format("woff2");
     }
 
     .png_guru {
-        position: absolute;
-        bottom: 0px;
-        filter: grayscale(1);
-        height: 70vh;
-        transition: 0.5s ease-in-out;
+      position: absolute;
+      bottom: 0px;
+      filter: grayscale(1);
+      height: 70vh;
+      transition: 0.5s ease-in-out;
     }
 
     .png_guru:hover {
-        filter: grayscale(0);
+      filter: grayscale(0);
     }
 
     #left-text {
-        background-color: rgb(235, 235, 235);
-        z-index: 1;
-        width: 0%;
+      background-color: rgb(235, 235, 235);
+      z-index: 1;
+      width: 0%;
     }
 
     #rio_png {
-        right: 0;
+      right: 0;
     }
 
     #steven_png {
-        position: absolute;
-        right: 0;
-        transform: translateX(100%);
-        transition: 1s cubic-bezier(0.55, 0, 0.44, 1);
+      position: absolute;
+      right: 0;
+      transform: translateX(100%);
+      transition: 1s cubic-bezier(0.55, 0, 0.44, 1);
     }
 
     #steven_png:hover {
-        transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
     }
 
     .sharp-font {
-        font-family: sharp_font, Rubik, "Poppins", sans-serif;
-        font-size: 12vh;
+      font-family: sharp_font, Rubik, "Poppins", sans-serif;
+      font-size: 12vh;
     }
 
     #right-text {
-        background-color: rgba(255, 88, 81, 255);
+      background-color: rgba(255, 88, 81, 255);
     }
 
     .side {
-        height: 100%;
-        width: 100%;
-        display: grid;
-        place-items: center;
-        overflow: hidden;
-        position: absolute;
-        transition: 1s cubic-bezier(0.55, 0, 0.44, 1);
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: absolute;
+      transition: 1s cubic-bezier(0.55, 0, 0.44, 1);
     }
 
     #headers {
-        background-color: rgb(235, 235, 235);
-        position: relative;
-        overflow: hidden;
-        height: 100%;
+      background-color: rgb(235, 235, 235);
+      position: relative;
+      overflow: hidden;
+      height: 100%;
     }
 
     #containered {
-        padding: 5vh;
-        height: 90vh;
+      padding: 5vh;
+      height: 90vh;
     }
 
     #logos {
-        width: 30vw;
-        position: absolute;
-        transform: translate(-50%, -50%);
+      width: 30vw;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      transition: 1s cubic-bezier(0.36, 0.08, 0.27, 0.86);
+      animation: up_down 1s ease-in-out infinite;
+    }
+
+    @keyframes up_down {
+      0%,
+      100% {
         top: 50%;
-        left: 50%;
-        z-index: 3;
-        transition: 1s cubic-bezier(0.36, 0.08, 0.27, 0.86);
+      }
+      50% {
+        top: 53%;
+      }
+    }
+
+    #logos_scroll {
+      position: absolute;
+      transform: translate(-50%, -50%) rotate(90deg);
+      left: 50%;
+      bottom: 65%;
+      font-size: 2vw;
+      color: rgba(255, 88, 81, 255);
+      font-weight: bold;
+      transition: 1s cubic-bezier(0.55, 0, 0.44, 1);
     }
 
     * {
-        margin: 0px;
-        padding: 0px;
-        scroll-behavior: smooth;
-        font-family: Rubik, "Poppins", sans-serif;
+      margin: 0px;
+      padding: 0px;
+      scroll-behavior: smooth;
+      font-family: Rubik, "Poppins", sans-serif;
     }
 
     #red_block {
-        background-color: rgba(255, 88, 81, 255);
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        z-index: 2;
+      background-color: rgba(255, 88, 81, 255);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
     }
 
     a {
-        text-decoration: none;
-        color: inherit;
+      text-decoration: none;
+      color: inherit;
     }
 
     .nav_link {
-        font-size: 3vh;
-        padding: 0.5vh;
-        color: black;
-        position: relative;
+      font-size: 3vh;
+      padding: 0.5vh;
+      color: black;
+      position: relative;
     }
 
     .nav_link::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        background-color: black;
-        border-radius: 4px;
-        scale: 0 1;
-        transform-origin: left;
-        transition: scale 0.25s;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      border-radius: 4px;
+      scale: 0 1;
+      transform-origin: left;
+      transition: scale 0.25s;
     }
 
     .nav_link:hover::before {
-        scale: 1;
+      scale: 1;
     }
 
     #naved {
-        display: grid;
-        position: fixed;
-        width: 100%;
-        background-color: white;
-        grid-template-columns: 3fr 1fr 1fr 1fr;
-        grid-gap: 20px;
-        justify-content: center;
-        align-items: center;
-        height: 5vh;
-        z-index: 999;
-        padding: 0 5vh 0 5vh;
+      display: grid;
+      position: fixed;
+      width: 100%;
+      background-color: white;
+      grid-template-columns: 3fr 1fr 1fr 1fr;
+      grid-gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 5vh;
+      z-index: 999;
+      padding: 0 5vh 0 5vh;
     }
 
     .side .ha2 {
-        margin: 0px 15vw;
-        font-size: 8vw;
-        width: 70vw;
+      margin: 0px 15vw;
+      font-size: 8vw;
+      width: 70vw;
     }
 
     body {
-        position: fixed;
-        overflow-y: scroll;
-        width: 100%;
+      position: fixed;
+      overflow-y: scroll;
+      width: 100%;
     }
-</style>
-<script>
+  </style>
+  <script>
     document.documentElement.scrollTop = 0;
 
     // const rb_style = document.getElementById('red_block').style;
@@ -244,30 +284,33 @@
     const left_style = document.getElementById("left-text").style;
     const st_style = document.getElementById("steven").style;
     const st_png_style = document.getElementById("steven_png").style;
+    const l_scroll_style = document.getElementById("logos_scroll").style;
     st_style.display = st_png_style.display = "none";
 
     document.onreadystatechange = () =>
+      setTimeout(function () {
+        // rb_style.width = `50%`;
+
+        left_style.width = "100%";
+        ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
+
         setTimeout(function () {
-            // rb_style.width = `50%`;
-
-            left_style.width = "100%";
-            ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
-
-            setTimeout(function () {
-                st_png_style.display = st_style.display = "";
-                body_style.overflowY =
-                    body_style.position =
-                    body_style.width =
-                    ll_style.transition =
-                    "unset";
-            }, 1000);
-        }, 200);
+          st_png_style.display = st_style.display = "";
+          body_style.overflowY =
+            body_style.position =
+            body_style.width =
+            ll_style.transition =
+              "unset";
+        }, 1000);
+      }, 200);
 
     window.addEventListener("scroll", (event) => {
-        let widths = !!window.scrollY ? 0 : 100;
-        left_style.width = widths + "%";
-        st_png_style.right = widths ? "0" : "100%";
+      let widths = !!window.scrollY ? 0 : 100;
+      left_style.width = widths + "%";
+      st_png_style.right = widths ? "0" : "100%";
+      l_scroll_style.color = widths
+        ? "rgba(255, 88, 81, 255)"
+        : "rgb(235, 235, 235)";
     });
-</script>
-
+  </script>
 </html>
