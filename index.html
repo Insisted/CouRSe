@@ -105,7 +105,7 @@
       position: absolute;
       bottom: 0px;
       filter: grayscale(1);
-      transition: 0.5s ease-in-out;
+      height: 50vh;
     }
 
     .png_guru:hover {
@@ -272,8 +272,7 @@
     window.addEventListener("scroll", (event) => {
       let widths = !!window.scrollY ? 0 : 100;
       left_style.width = widths + "%";
-      st_png_style.transform =
-        "translateX(" + (widths ? "100%)" : "calc(-100vw + 100% + 60px))");
+    st_png_style.right = widths? "0" : "100%";
     });
   </script>
 </html>
