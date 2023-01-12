@@ -1,19 +1,26 @@
-
-/*We do this because the carousel needs to be 100% width 
-in order for the aspect ratio trick to work*/
 .carousel-container {
-  max-width: 980px;
-  width: 95%;
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
 }
 
-/*This is the actual carousel. Overflow hidden acts as a mask*/
 
 .carousel {
+  border-radius: 40px;
   position: relative;
   width: 100%;
-  /*Width of image is 980px. Height is 570px.*/
   padding-top: calc(570 / 980 * 100%);
   overflow: hidden;
+}
+
+.shadow {
+  box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 200px;
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
 
 .carousel-container img {
@@ -21,8 +28,11 @@ in order for the aspect ratio trick to work*/
   top: 0;
   left: 0;
   width: 100%;
+  object-fit: cover;
   height: 100%;
 }
+
+
 
 .left-arrow {
   position: absolute;
@@ -82,6 +92,7 @@ in order for the aspect ratio trick to work*/
   justify-content: center;
   align-items: start;
   bottom: 0;
+  z-index: 2;
   left: 0;
   width: 100%;
   height: 45px;
@@ -108,6 +119,7 @@ in order for the aspect ratio trick to work*/
   align-items: center;
   bottom: 45px;
   left: 0;
+  z-index: 2;
   width: 100%;
   color: white;
   text-shadow: 1px 1px black;
@@ -116,7 +128,6 @@ in order for the aspect ratio trick to work*/
 
 .text-container p:nth-child(1) {
   margin: 10px 100px;
-  font-size: 1.5em;
 }
 
 .text-container p:nth-child(2) {
@@ -130,6 +141,7 @@ in order for the aspect ratio trick to work*/
   width: 100%;
   height: 100%;
 }
+
 
 /* Animations */
 @keyframes toRight {

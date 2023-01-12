@@ -31,13 +31,14 @@
   <link rel="stylesheet" href="./assets/carousel.css" />
 </head>
 
-<body id="top">
+<body>
   <nav id="naved">
-    <a href="#top"><img src="./favicon.svg" style="height: 4vh" /></a>
-    <a href=".content" class="nav_link">Kursus</a>
-    <a href="#" class="nav_link">Testimoni</a>
-    <a href="#" class="nav_link">About</a>
-    <a href="#" class="nav_link">Cart</a>
+    <a href="#"><img src="./favicon.svg" style="height: 4vh" /></a>
+    <a href="#about_scroll" class="nav_link">About</a>
+    <a href="#kursus_scroll" class="nav_link">Kursus</a>
+    <a href="#testimoni_scroll" class="nav_link">Testimoni</a>
+    <a href="#mentor_scroll" class="nav_link">Mentor</a>
+    <a href="#"><img src="./images/cart_icon.svg" style="height: 5vh"></a>
   </nav>
   <div id="containered">
     <div id="headers">
@@ -63,14 +64,29 @@
     </div>
   </div>
 
-  <div class="content">
+  <div class="content" id="about_scroll">
+    <h2>
+      Apa Itu CouRSe?
+    </h2>
+    <p id="pengenalan"  style="text-align: justify">Course merupakan situs atau platfrom pembelajaran yang dapat digunakan dengan cara melakukan
+      <i>purchasing</i> terlebih dahulu.
+      Setelah <i>purchasing</i> berhasil, mentor kami akan melakukan pembelajaran melalui sistem <i>daring</i> atau
+      <i>online</i></p>
+  </div>
+  <br />
+  <hr />
+  <br>
+
+  <div class="content" id="kursus_scroll">
     <h2 class="subbab">Kursus Yang Kami Tawarkan</h2>
     <div class="list_kursus">
       <div class="card_kursus active_kursus" style="background-image: url(images/course_3d.jpeg)">
         <div class="card-cart" id="one">
           <span style="white-space: pre-line">Rp.
             1.000.000</span>
-          <img src="./images/cart_icon.svg" class="cart" />
+          <div class="add-cart">
+            <img src="./images/add_cart_icon.svg" />
+          </div>
         </div>
 
         <div class="shadow_kursus"></div>
@@ -89,7 +105,11 @@
         <div class="card-cart" id="two">
           <span style="white-space: pre-line">Rp.
             800.000</span>
-          <img src="./images/cart_icon.svg" class="cart" />
+
+          <div class="add-cart">
+            <img src="./images/add_cart_icon.svg" />
+          </div>
+
         </div>
 
         <div class="shadow_kursus"></div>
@@ -107,7 +127,11 @@
         <div class="card-cart" id="three">
           <span style="white-space: pre-line">Rp.
             200.000 </span>
-          <img src="./images/cart_icon.svg" class="cart" />
+
+          <div class="add-cart">
+            <img src="./images/add_cart_icon.svg" />
+          </div>
+
         </div>
 
         <div class="shadow_kursus"></div>
@@ -125,7 +149,11 @@
         <div class="card-cart" id="four">
           <span style="white-space: pre-line">Rp.
             600.000 </span>
-          <img src="./images/cart_icon.svg" class="cart" />
+
+          <div class="add-cart">
+            <img src="./images/add_cart_icon.svg" />
+          </div>
+
         </div>
 
         <div class="shadow_kursus"></div>
@@ -143,7 +171,11 @@
         <div class="card-cart" id="five">
           <span style="white-space: pre-line">Rp.
             400.000 </span>
-          <img src="./images/cart_icon.svg" class="cart" />
+
+          <div class="add-cart">
+            <img src="./images/add_cart_icon.svg" />
+          </div>
+
         </div>
 
         <div class="shadow_kursus"></div>
@@ -162,7 +194,11 @@
         <div class="card-cart" id="six">
           <span style="white-space: pre-line">Rp.
             400.000 </span>
-          <img src="./images/cart_icon.svg" class="cart" />
+
+          <div class="add-cart">
+            <img src="./images/add_cart_icon.svg" />
+          </div>
+
         </div>
 
         <div class="shadow_kursus"></div>
@@ -178,41 +214,45 @@
       </div>
     </div>
   </div>
-  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <br />
+  <hr />
+  <br>
 
 
-  <div class="content">
+  <div class="content" id="testimoni_scroll">
+    <h2 class="subbab">Apa Yang Pelanggan Kami Pikirkan</h2>
     <div class="carousel-container">
+
       <div class="carousel" id="carousel-1" auto-scroll="7000">
-        <!--The uppermost screen will appear first. This is due to JavaScript-->
-        <section class="carousel-screen">
-          <img src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago Band" />
-          <section class="text-container">
-            <p>Chicago</p>
-            <p>Thank you, Chicago!</p>
-          </section>
-        </section>
-        <section class="carousel-screen">
-          <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New York" />
-          <section class="text-container">
-            <p>New York</p>
-            <p>We love the Big Apple!</p>
-          </section>
-        </section>
-        <section class="carousel-screen">
-          <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles" />
-          <section class="text-container">
-            <p>Los Angeles</p>
-            <p>LA is always so much fun!</p>
-          </section>
-        </section>
-        <!--These are not screens. They will always be on carousel-->
-        <section class="circle-container">
-          <!--These 'circles' need to match the number of carousel screens-->
+        <div class="carousel-screen">
+          <div class="shadow"></div>
+          <img src="./images/Testimoni-1.jpg" />
+          <div class="text-container">
+            <p class="main">Alexander Jaeger</p>
+            <p class="sub">CouRSe adalah platfrom kursus terbaik yang saya temui</p>
+          </div>
+        </div>
+        <div class="carousel-screen">
+          <div class="shadow"></div>
+          <img src="./images/Testimoni-2.jpg" />
+          <div class="text-container">
+            <p class="main">Glenn Axel</p>
+            <p class="sub">Aku sangat menyukai para mentor/guru di platform ini</p>
+          </div>
+        </div>
+        <div class="carousel-screen">
+          <div class="shadow"></div>
+          <img src="./images/Testimoni-3.jpg" />
+          <div class="text-container">
+            <p class="main">Natsu Hiro</p>
+            <p class="sub">Pembelajaran bersama mentor menjadi sangat menyenangkan karena website ini!!</p>
+          </div>
+        </div>
+        <div class="circle-container">
           <div class="circle"></div>
           <div class="circle"></div>
           <div class="circle"></div>
-        </section>
+        </div>
         <div class="left-arrow">
           <span class="chevron left"></span>
         </div>
@@ -222,8 +262,71 @@
       </div>
     </div>
   </div>
+  <br />
+  <hr />
+  <br>
 
-  <div id="go_top"><a href="#top">↑</a></div>
+  <div class="content" id="mentor_scroll">
+
+  </div>
+
+  <footer class="site-footer">
+    <div>
+      <div class="row content">
+        <div>
+          <h6>Tentang Kami</h6>
+          <p style="text-align: justify">Course merupakan situs atau platfrom pembelajaran yang dapat digunakan dengan cara melakukan
+            <i>purchasing</i> terlebih dahulu.
+            Setelah <i>purchasing</i> berhasil, mentor kami akan melakukan pembelajaran melalui sistem <i>daring</i> atau
+            <i>online</i></p>
+        </div>
+
+        <div>
+          <h6>Kursus</h6>
+          <ul class="footer-links">
+            <li><a href="#kursus_scroll">3D Modeling</a></li>
+            <li><a href="#kursus_scroll">Koding</a></li>
+            <li><a href="#kursus_scroll">Desain</a></li>
+            <li><a href="#kursus_scroll">Musik</a></li>
+            <li><a href="#kursus_scroll">Fotografi</a></li>
+            <li><a href="#kursus_scroll">Video Editing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="#">CouRSe</a></li>
+            <li><a href="#kursus_scroll">Kursus</a></li>
+            <li><a href="#testimoni_scroll">Testimoni</a></li>
+            <li><a href="#mentor_scroll">Mentor</a></li>
+            <li><a href="#copyright">Copyright</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div id="copyright">
+      <div class="row-bot content">
+        <div>
+          <p>Copyright &copy; 2023 All Rights Reserved by
+            <a href="#">Rio and Steven CouRSe</a>.
+          </p>
+        </div>
+
+        <div>
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="go_top"><a href="#">↑</a></div>
 </body>
 
 <script src="./assets/jquery-3.6.3.min.js"></script>
@@ -301,6 +404,7 @@
       return;
     }
 
+    alert(`Kursus ${course_name} berhasil ditambahkan ke keranjang`)
     let t_template = '<tr><td>' + [course_name, course[course_name]['harga']].join('</td><td>') + '</td></tr>'
     order[course_name] = t_template;
   });
