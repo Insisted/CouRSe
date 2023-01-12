@@ -1,6 +1,5 @@
 #content {
     padding: 5vh;
-    text-align: center;
     display: grid;
     place-items: center;
   }
@@ -9,6 +8,30 @@
     font-size: 5vw;
     padding-bottom: 5vh;
   }
+
+  .card-cart {
+    border: 1px solid;
+    bottom: 10px;
+    left: 86%;
+    display: flex;
+    position: absolute;
+    z-index: 9999999;
+    background-color: rgba(185, 185, 185, 0.5);
+    padding: .3em;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: .3s ease-in-out;
+    width: 50px;
+   }   
+
+   .card-cart:hover {
+    border: 1px solidrgb(235, 235, 235);
+    background-color: rgb(235, 235, 235);
+   }
+
+   .cart{
+    width: 50px;
+   }
 
   @keyframes pulse_top {
     0% {
@@ -254,6 +277,10 @@
     left: 0px;
     opacity: 1;
   }
+  .list_kursus .card_kursus.active_kursus .card-cart {
+    
+    opacity: 1;
+  }
   .list_kursus .card_kursus:not(.active_kursus) {
     flex-grow: 1;
     border-radius: 30px;
@@ -262,6 +289,10 @@
     bottom: -40px;
     box-shadow: inset 0 -120px 0px -120px black,
       inset 0 -120px 0px -100px black;
+  }
+  .list_kursus .card_kursus:not(.active_kursus) .card-cart {
+    
+    opacity: 0;
   }
   .list_kursus .card_kursus:not(.active_kursus) .label_kursus {
     bottom: 10px;

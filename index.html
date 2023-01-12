@@ -37,17 +37,16 @@
     ></script> -->
 
     <script src="jquery-3.6.3.min.js"></script>
-    
 
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
   </head>
 
   <body id="top">
     <nav id="naved">
-      <a href="#"><img src="favicon.svg" style="height: 4vh" /></a>
-      <a href="#" class="nav_link">Home</a>
+      <a href="#top"><img src="favicon.svg" style="height: 4vh" /></a>
+      <a href="#content" class="nav_link">Kursus</a>
       <a href="#" class="nav_link">About</a>
       <a href="#" class="nav_link">Log In</a>
     </nav>
@@ -72,8 +71,8 @@
           <img src="image/Steven.png" id="steven_png" class="png_guru" />
         </div>
         <div id="logos">
-          <a href="#top" draggable="false" id="logos_scroll">Scroll</a>
-          <a href="#top" draggable="false"
+          <a href="#content" draggable="false" id="logos_scroll">Scroll</a>
+          <a href="#content" draggable="false"
             ><img src="favicon.svg" draggable="false"
           /></a>
         </div>
@@ -88,6 +87,10 @@
           class="card_kursus active_kursus"
           style="background-image: url(image/course_3d.jpeg)"
         >
+          <div class="card-cart">
+            <img src="image/cart_icon.svg" class="cart" />
+          </div>
+
           <div class="shadow_kursus"></div>
           <div class="label_kursus">
             <div class="icon_kursus">
@@ -103,6 +106,10 @@
           class="card_kursus"
           style="background-image: url(image/course_coding.jpg)"
         >
+          <div class="card-cart">
+            <img src="image/cart_icon.svg" class="cart" />
+          </div>
+
           <div class="shadow_kursus"></div>
           <div class="label_kursus">
             <div class="icon_kursus">
@@ -118,6 +125,10 @@
           class="card_kursus"
           style="background-image: url(image/course_design.jpg)"
         >
+          <div class="card-cart">
+            <img src="image/cart_icon.svg" class="cart" />
+          </div>
+
           <div class="shadow_kursus"></div>
           <div class="label_kursus">
             <div class="icon_kursus">
@@ -133,6 +144,10 @@
           class="card_kursus"
           style="background-image: url(image/course_music.jpg)"
         >
+          <div class="card-cart">
+            <img src="image/cart_icon.svg" class="cart" />
+          </div>
+
           <div class="shadow_kursus"></div>
           <div class="label_kursus">
             <div class="icon_kursus">
@@ -148,6 +163,10 @@
           class="card_kursus"
           style="background-image: url(image/course_photography.jpg)"
         >
+          <div class="card-cart">
+            <img src="image/cart_icon.svg" class="cart" />
+          </div>
+
           <div class="shadow_kursus"></div>
           <div class="label_kursus">
             <div class="icon_kursus">
@@ -164,6 +183,10 @@
           class="card_kursus"
           style="background-image: url(image/course_video.jpg)"
         >
+          <div class="card-cart">
+            <img src="image/cart_icon.svg" class="cart" />
+          </div>
+
           <div class="shadow_kursus"></div>
           <div class="label_kursus">
             <div class="icon_kursus">
@@ -199,7 +222,6 @@
       $(".card_kursus").removeClass("active_kursus");
       $(this).addClass("active_kursus");
     });
-
 
     document.onreadystatechange = () =>
       setTimeout(function () {
