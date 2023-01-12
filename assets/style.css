@@ -253,8 +253,8 @@ a {
 }
 
 body {
-  /* position: fixed; */
-  /* overflow-y: scroll; */
+  position: fixed;
+  overflow-y: scroll;
   width: 100%;
 }
 
