@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CouRSe - Rio and Steven Course</title>
-    <link
-      rel="icon"
-      type="image/svg"
-      href="favicon.svg"
-      media="(prefers-color-scheme: light)"
-    />
-    <link
-      rel="icon"
-      type="image/svg"
-      href="favicon-light.svg"
-      media="(prefers-color-scheme: dark)"
-    />
-    <!-- Bootstrap CSS v5.2.1
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CouRSe - Rio and Steven Course</title>
+  <link rel="icon" type="images/svg" href="favicon.svg" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="images/svg" href="favicon-light.svg" media="(prefers-color-scheme: dark)" />
+  <!-- Bootstrap CSS v5.2.1
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,229 +16,294 @@
       crossorigin="anonymous"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      src="./https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"
     ></script>
 
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      src="./https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script> -->
 
-    <script src="jquery-3.6.3.min.js"></script>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="stylesheet" href="./assets/carousel.css" />
+</head>
 
-    <link rel="stylesheet" href="style.css" />
-
-    <script src="script.js"></script>
-  </head>
-
-  <body id="top">
-    <nav id="naved">
-      <a href="#top"><img src="favicon.svg" style="height: 4vh" /></a>
-      <a href="#content" class="nav_link">Kursus</a>
-      <a href="#" class="nav_link">About</a>
-      <a href="#" class="nav_link">Log In</a>
-    </nav>
-    <div id="containered">
-      <div id="headers">
-        <div id="left-text" class="side">
-          <h2 class="ha2">
-            Let's Get Going With
-            <span class="sharp-font" style="color: rgba(255, 88, 81, 255)"
-              >Rio</span
-            >
-          </h2>
-          <img src="image/Rio.png" id="rio_png" class="png_guru" />
-        </div>
-        <div id="right-text" class="side">
-          <h2 class="ha2" id="steven">
-            Let's Get Going With
-            <span class="sharp-font" style="color: rgb(235, 235, 235)"
-              >Steven</span
-            >
-          </h2>
-          <img src="image/Steven.png" id="steven_png" class="png_guru" />
-        </div>
-        <div id="logos">
-          <a href="#content" draggable="false" id="logos_scroll">Scroll</a>
-          <a href="#content" draggable="false"
-            ><img src="favicon.svg" draggable="false"
-          /></a>
-        </div>
-        <!-- <div id="red_block"></div> -->
+<body id="top">
+  <nav id="naved">
+    <a href="#top"><img src="./favicon.svg" style="height: 4vh" /></a>
+    <a href=".content" class="nav_link">Kursus</a>
+    <a href="#" class="nav_link">Testimoni</a>
+    <a href="#" class="nav_link">About</a>
+    <a href="#" class="nav_link">Cart</a>
+  </nav>
+  <div id="containered">
+    <div id="headers">
+      <div id="left-text" class="side">
+        <h2 class="ha2">
+          Let's Get Going With
+          <span class="sharp-font" style="color: rgba(255, 88, 81, 255)">Rio</span>
+        </h2>
+        <img src="./images/Rio.png" id="rio_png" class="png_guru" />
       </div>
+      <div id="right-text" class="side">
+        <h2 class="ha2" id="steven">
+          Let's Get Going With
+          <span class="sharp-font" style="color: rgb(235, 235, 235)">Steven</span>
+        </h2>
+        <img src="./images/Steven.png" id="steven_png" class="png_guru" />
+      </div>
+      <div id="logos">
+        <a href="#content" draggable="false" id="logos_scroll">Scroll</a>
+        <a href="#content" draggable="false"><img src="./favicon.svg" draggable="false" /></a>
+      </div>
+      <!-- <div id="red_block"></div> -->
     </div>
+  </div>
 
-    <div id="content">
-      <h2>Kursus Yang Kami Tawarkan</h2>
-      <div class="list_kursus">
-        <div
-          class="card_kursus active_kursus"
-          style="background-image: url(image/course_3d.jpeg)"
-        >
-          <div class="card-cart">
-            <img src="image/cart_icon.svg" class="cart" />
-          </div>
-
-          <div class="shadow_kursus"></div>
-          <div class="label_kursus">
-            <div class="icon_kursus">
-              <img src="image/course_3d_icon.svg" />
-            </div>
-            <div class="info">
-              <div class="main">3D Modelling</div>
-              <div class="sub">Kursus Belajar 3D Modelling 5 Bulan</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card_kursus"
-          style="background-image: url(image/course_coding.jpg)"
-        >
-          <div class="card-cart">
-            <img src="image/cart_icon.svg" class="cart" />
-          </div>
-
-          <div class="shadow_kursus"></div>
-          <div class="label_kursus">
-            <div class="icon_kursus">
-              <img src="image/course_coding_icon.svg" />
-            </div>
-            <div class="info">
-              <div class="main">Koding</div>
-              <div class="sub">Kursus Belajar Koding 1 Bulan</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card_kursus"
-          style="background-image: url(image/course_design.jpg)"
-        >
-          <div class="card-cart">
-            <img src="image/cart_icon.svg" class="cart" />
-          </div>
-
-          <div class="shadow_kursus"></div>
-          <div class="label_kursus">
-            <div class="icon_kursus">
-              <img src="image/course_design_icon.svg" />
-            </div>
-            <div class="info">
-              <div class="main">Desain</div>
-              <div class="sub">Kursus Belajar Desain 3 Bulan</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card_kursus"
-          style="background-image: url(image/course_music.jpg)"
-        >
-          <div class="card-cart">
-            <img src="image/cart_icon.svg" class="cart" />
-          </div>
-
-          <div class="shadow_kursus"></div>
-          <div class="label_kursus">
-            <div class="icon_kursus">
-              <img src="image/course_music_icon.svg" />
-            </div>
-            <div class="info">
-              <div class="main">Musik</div>
-              <div class="sub">Kursus Belajar Musik 3 Bulan</div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="card_kursus"
-          style="background-image: url(image/course_photography.jpg)"
-        >
-          <div class="card-cart">
-            <img src="image/cart_icon.svg" class="cart" />
-          </div>
-
-          <div class="shadow_kursus"></div>
-          <div class="label_kursus">
-            <div class="icon_kursus">
-              <img src="image/course_photography_icon.svg" />
-            </div>
-            <div class="info">
-              <div class="main">Fotografi</div>
-              <div class="sub">Kursus Belajar Fotografi 2 Bulan</div>
-            </div>
-          </div>
+  <div class="content">
+    <h2 class="subbab">Kursus Yang Kami Tawarkan</h2>
+    <div class="list_kursus">
+      <div class="card_kursus active_kursus" style="background-image: url(images/course_3d.jpeg)">
+        <div class="card-cart" id="one">
+          <span style="white-space: pre-line">Rp.
+            1.000.000</span>
+          <img src="./images/cart_icon.svg" class="cart" />
         </div>
 
-        <div
-          class="card_kursus"
-          style="background-image: url(image/course_video.jpg)"
-        >
-          <div class="card-cart">
-            <img src="image/cart_icon.svg" class="cart" />
+        <div class="shadow_kursus"></div>
+        <div class="label_kursus">
+          <div class="icon_kursus">
+            <img src="./images/course_3d_icon.svg" />
           </div>
+          <div class="info">
+            <div class="main">3D Modelling</div>
+            <div class="sub">Kursus Belajar 5 Bulan</div>
 
-          <div class="shadow_kursus"></div>
-          <div class="label_kursus">
-            <div class="icon_kursus">
-              <img src="image/course_video_icon.svg" />
-            </div>
-            <div class="info">
-              <div class="main">Video Editing</div>
-              <div class="sub">Kursus Belajar Video Editing 4 Bulan</div>
-            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card_kursus" style="background-image: url(images/course_coding.jpg)">
+        <div class="card-cart" id="two">
+          <span style="white-space: pre-line">Rp.
+            800.000</span>
+          <img src="./images/cart_icon.svg" class="cart" />
+        </div>
+
+        <div class="shadow_kursus"></div>
+        <div class="label_kursus">
+          <div class="icon_kursus">
+            <img src="./images/course_coding_icon.svg" />
+          </div>
+          <div class="info">
+            <div class="main">Koding</div>
+            <div class="sub">Kursus Belajar 4 Bulan</div>
+          </div>
+        </div>
+      </div>
+      <div class="card_kursus" style="background-image: url(images/course_design.jpg)">
+        <div class="card-cart" id="three">
+          <span style="white-space: pre-line">Rp.
+            200.000 </span>
+          <img src="./images/cart_icon.svg" class="cart" />
+        </div>
+
+        <div class="shadow_kursus"></div>
+        <div class="label_kursus">
+          <div class="icon_kursus">
+            <img src="./images/course_design_icon.svg" />
+          </div>
+          <div class="info">
+            <div class="main">Desain</div>
+            <div class="sub">Kursus Belajar 1 Bulan</div>
+          </div>
+        </div>
+      </div>
+      <div class="card_kursus" style="background-image: url(images/course_music.jpg)">
+        <div class="card-cart" id="four">
+          <span style="white-space: pre-line">Rp.
+            600.000 </span>
+          <img src="./images/cart_icon.svg" class="cart" />
+        </div>
+
+        <div class="shadow_kursus"></div>
+        <div class="label_kursus">
+          <div class="icon_kursus">
+            <img src="./images/course_music_icon.svg" />
+          </div>
+          <div class="info">
+            <div class="main">Musik</div>
+            <div class="sub">Kursus Belajar 3 Bulan</div>
+          </div>
+        </div>
+      </div>
+      <div class="card_kursus" style="background-image: url(images/course_photography.jpg)">
+        <div class="card-cart" id="five">
+          <span style="white-space: pre-line">Rp.
+            400.000 </span>
+          <img src="./images/cart_icon.svg" class="cart" />
+        </div>
+
+        <div class="shadow_kursus"></div>
+        <div class="label_kursus">
+          <div class="icon_kursus">
+            <img src="./images/course_photography_icon.svg" />
+          </div>
+          <div class="info">
+            <div class="main">Fotografi</div>
+            <div class="sub">Kursus Belajar 2 Bulan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card_kursus" style="background-image: url(images/course_video.jpg)">
+        <div class="card-cart" id="six">
+          <span style="white-space: pre-line">Rp.
+            400.000 </span>
+          <img src="./images/cart_icon.svg" class="cart" />
+        </div>
+
+        <div class="shadow_kursus"></div>
+        <div class="label_kursus">
+          <div class="icon_kursus">
+            <img src="./images/course_video_icon.svg" />
+          </div>
+          <div class="info">
+            <div class="main">Video Editing</div>
+            <div class="sub">Kursus Belajar 2 Bulan</div>
           </div>
         </div>
       </div>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-    <div id="go_top"><a href="#top">↑</a></div>
-  </body>
-  <script>
-    document.documentElement.scrollTop = 0;
 
-    // const rb_style = document.getElementById('red_block').style;
-    const body_style = document.getElementsByTagName("body")[0].style;
-    const ll_style = document.getElementById("logos").style;
-    const head_style = document.getElementById("headers").style;
-    const left_style = document.getElementById("left-text").style;
-    const st_style = document.getElementById("steven").style;
-    const st_png_style = document.getElementById("steven_png").style;
-    const l_scroll_style = document.getElementById("logos_scroll").style;
-    const go_top_style = document.getElementById("go_top").style;
-    st_style.display = st_png_style.display = "none";
+  <div class="content">
+    <div class="carousel-container">
+      <div class="carousel" id="carousel-1" auto-scroll="7000">
+        <!--The uppermost screen will appear first. This is due to JavaScript-->
+        <section class="carousel-screen">
+          <img src="https://www.w3schools.com/bootstrap/chicago.jpg" alt="Chicago Band" />
+          <section class="text-container">
+            <p>Chicago</p>
+            <p>Thank you, Chicago!</p>
+          </section>
+        </section>
+        <section class="carousel-screen">
+          <img src="https://www.w3schools.com/bootstrap/ny.jpg" alt="New York" />
+          <section class="text-container">
+            <p>New York</p>
+            <p>We love the Big Apple!</p>
+          </section>
+        </section>
+        <section class="carousel-screen">
+          <img src="https://www.w3schools.com/bootstrap/la.jpg" alt="Los Angeles" />
+          <section class="text-container">
+            <p>Los Angeles</p>
+            <p>LA is always so much fun!</p>
+          </section>
+        </section>
+        <!--These are not screens. They will always be on carousel-->
+        <section class="circle-container">
+          <!--These 'circles' need to match the number of carousel screens-->
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </section>
+        <div class="left-arrow">
+          <span class="chevron left"></span>
+        </div>
+        <div class="right-arrow">
+          <span class="chevron right"></span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    $(".card_kursus").hover(function () {
-      $(".card_kursus").removeClass("active_kursus");
-      $(this).addClass("active_kursus");
-    });
+  <div id="go_top"><a href="#top">↑</a></div>
+</body>
 
-    document.onreadystatechange = () =>
+<script src="./assets/jquery-3.6.3.min.js"></script>
+<script src="./assets/carousel.js"></script>
+
+<script>
+  // document.documentElement.scrollTop = 0;
+
+  // const rb_style = document.getElementById('red_block').style;
+  const body_style = document.getElementsByTagName("body")[0].style;
+  const ll_style = document.getElementById("logos").style;
+  const head_style = document.getElementById("headers").style;
+  const left_style = document.getElementById("left-text").style;
+  const st_style = document.getElementById("steven").style;
+  const st_png_style = document.getElementById("steven_png").style;
+  const l_scroll_style = document.getElementById("logos_scroll").style;
+  const go_top_style = document.getElementById("go_top").style;
+  st_style.display = st_png_style.display = "none";
+
+
+  $(".card_kursus").hover(function () {
+    $(".card_kursus").removeClass("active_kursus");
+    $(this).addClass("active_kursus");
+  });
+
+  document.onreadystatechange = () =>
+    setTimeout(function () {
+      // rb_style.width = `50%`;
+
+      left_style.width = "100%";
+      ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
+
       setTimeout(function () {
-        // rb_style.width = `50%`;
+        st_png_style.display = st_style.display = "";
+        body_style.overflowY =
+          body_style.position =
+          body_style.width =
+          ll_style.transition =
+          "unset";
+      }, 1000);
+    }, 200);
 
-        left_style.width = "100%";
-        ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
+  window.addEventListener("scroll", (event) => {
+    let cek = !!window.scrollY ? 0 : 100;
+    left_style.width = cek + "%";
+    st_png_style.right = cek ? "0" : "100%";
+    l_scroll_style.color = cek
+      ? "rgba(255, 88, 81, 255)"
+      : "rgb(235, 235, 235)";
+    go_top_style.opacity = cek ? "0" : "1";
+  });
 
-        setTimeout(function () {
-          st_png_style.display = st_style.display = "";
-          body_style.overflowY =
-            body_style.position =
-            body_style.width =
-            ll_style.transition =
-              "unset";
-        }, 1000);
-      }, 200);
+  const list_cart = {};
+  const course = {
+    '3D Modelling': { harga: 1000000 },
+    'Koding': { harga: 1000000 },
+    'Desain': { harga: 1000000 },
+    'Musik': { harga: 1000000 },
+    'Fotografi': { harga: 1000000 },
+    'Video Editing': { harga: 1000000 },
+  };
 
-    window.addEventListener("scroll", (event) => {
-      let cek = !!window.scrollY ? 0 : 100;
-      left_style.width = cek + "%";
-      st_png_style.right = cek ? "0" : "100%";
-      l_scroll_style.color = cek
-        ? "rgba(255, 88, 81, 255)"
-        : "rgb(235, 235, 235)";
-      go_top_style.opacity = cek ? "0" : "1";
-    });
-  </script>
+  const order = {}
+
+  const cart_el = $('.card-cart');
+  const cart = [...cart_el].map(div => div.id);
+  cart.forEach((key, i) => list_cart[key] = Object.keys(course)[i]);
+
+  $(".card-cart").on('click', function (event) {
+    let id = $(this).attr('id');
+    let course_name = list_cart[id];
+
+    if (order[course_name] !== undefined) {
+      alert("Hanya bisa memilih satu item per kursus");
+      return;
+    }
+
+    let t_template = '<tr><td>' + [course_name, course[course_name]['harga']].join('</td><td>') + '</td></tr>'
+    order[course_name] = t_template;
+  });
+</script>
+
 </html>
