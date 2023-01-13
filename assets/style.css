@@ -4,6 +4,48 @@
   place-items: center;
 }
 
+.center-grid {
+  display: grid;
+  place-items: center;
+}
+
+#beli {
+  margin-top: 1rem;
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+}
+
+#beli span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+#beli span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+#beli span:not(hover) {
+  transition: all 1s;
+}
+
 div h2 {
   font-size: 5vw;
   padding-bottom: 5vh;
@@ -139,6 +181,7 @@ hr {
 }
 
 @keyframes up_down {
+
   0%,
   100% {
     top: 50%;
@@ -205,6 +248,7 @@ a {
 .nav_link:hover::before {
   scale: 1;
 }
+
 .span_show {
   white-space: pre-line;
   opacity: 0;
@@ -219,10 +263,11 @@ a {
   display: grid;
   place-items: center;
 }
+
 #dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: rgb(235, 235, 235);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -230,11 +275,14 @@ a {
   border-radius: 5px;
   top: 5vh;
 }
-#dropdown-content a, #dropdown-content input {
+
+#dropdown-content a,
+#dropdown-content input {
   color: black;
   text-decoration: none;
   display: block;
 }
+
 #dropdown:hover #dropdown-content {
   display: block;
 }
@@ -299,7 +347,7 @@ body {
   left: 20px;
 }
 
-.list_kursus .card_kursus.active_kursus .label_kursus .info > div {
+.list_kursus .card_kursus.active_kursus .label_kursus .info>div {
   left: 0px;
   opacity: 1;
 }
@@ -327,7 +375,7 @@ body {
   left: 10px;
 }
 
-.list_kursus .card_kursus:not(.active_kursus) .label_kursus .info > div {
+.list_kursus .card_kursus:not(.active_kursus) .label_kursus .info>div {
   left: 20px;
   opacity: 0;
 }
@@ -358,7 +406,7 @@ body {
   max-width: 40px;
   height: 40px;
   border-radius: 100%;
-  background-color: #212123;
+  background-color: rgb(235, 235, 235);
   color: var(--defaultBackground);
 }
 
@@ -393,6 +441,7 @@ body {
   display: grid;
   place-items: center;
 }
+
 .add-cart img {
   width: 45px;
 }
@@ -416,7 +465,7 @@ body {
   white-space: pre;
 }
 
-.label_kursus .info > div {
+.label_kursus .info>div {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
@@ -438,13 +487,16 @@ body {
   line-height: 24px;
   color: black;
 }
+
 .site-footer hr {
   border-top-color: #bbb;
   opacity: 0.5;
 }
+
 .site-footer hr.small {
   margin: 20px 0;
 }
+
 .site-footer h6 {
   color: white;
   font-size: 16px;
@@ -452,36 +504,45 @@ body {
   margin-top: 5px;
   letter-spacing: 2px;
 }
+
 .site-footer a {
   color: black;
   transition: 0.2s ease-in-out;
 }
+
 .site-footer a:hover {
   color: rgb(235, 235, 235);
   text-decoration: none;
 }
+
 .footer-links {
   padding-left: 0;
   list-style: none;
 }
+
 .footer-links li {
   display: block;
 }
+
 .footer-links a {
   color: black;
 }
+
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
   color: rgb(235, 235, 235);
   text-decoration: none;
 }
+
 .footer-links.inline li {
   display: inline-block;
 }
+
 .site-footer .social-icons {
   text-align: right;
 }
+
 .site-footer .social-icons a {
   width: 40px;
   height: 40px;
@@ -489,27 +550,23 @@ body {
   margin-left: 6px;
   margin-right: 0;
   border-radius: 100%;
-  background-color: #33353d;
+  background-color: rgb(235, 235, 235);
 }
+
 .social-icons {
   padding-top: 10px;
   margin-bottom: 0;
   list-style: none;
 }
+
 .social-icons li {
   display: inline-block;
   margin-bottom: 4px;
 }
-.social-icons li.title {
-  margin-right: 15px;
-  text-transform: uppercase;
-  color: #96a2b2;
-  font-weight: 700;
-  font-size: 13px;
-}
+
 .social-icons a {
-  background-color: #eceeef;
-  color: #818a91;
+  background-color: white;
+  color: rgb(235, 235, 235);
   font-size: 16px;
   display: inline-block;
   line-height: 44px;
@@ -522,12 +579,14 @@ body {
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
+
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
-  color: #fff;
+  color: white;
   background-color: #29aafe;
 }
+
 .social-icons.size-sm a {
   line-height: 34px;
   height: 34px;
@@ -539,16 +598,20 @@ body {
   display: grid;
   place-items: center;
 }
+
 .social-icons a img {
   width: 70%;
   transition: 0.3s ease-in-out;
 }
+
 .social-icons a.whatsapp:hover {
   background-color: rgba(36, 204, 99, 255);
 }
+
 .social-icons a.instagram:hover {
   background-color: rgba(241, 69, 86, 255);
 }
+
 .social-icons a img:hover {
   transform: scale(0.7);
 }
@@ -557,6 +620,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .row-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -632,6 +696,7 @@ body {
   font-size: 1em;
   text-align: center;
 }
+
 .card:hover {
   box-shadow: 0 8px 50px #23232333;
 }
