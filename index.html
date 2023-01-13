@@ -404,7 +404,6 @@
   const st_png_style = document.getElementById("steven_png").style;
   const l_scroll_style = document.getElementById("logos_scroll").style;
   const go_top_style = document.getElementById("go_top").style;
-  st_style.display = st_png_style.display = "none";
 
   $(".card_kursus").hover(function () {
     $(".card_kursus").removeClass("active_kursus");
@@ -428,7 +427,7 @@
       ll_style.transform = `translate(-50%, 50%) scale(0.4)`;
 
       setTimeout(function () {
-        st_png_style.display = st_style.display = "";
+        st_png_style.display = st_style.display = "unset";
         body_style.overflowY =
           body_style.position =
           body_style.width =

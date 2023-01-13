@@ -132,8 +132,13 @@ hr {
   right: 0;
 }
 
+#steven {
+  display: none;
+}
+
 #steven_png {
   position: absolute;
+  display: none;
   right: 0;
   transform: translateX(100%);
   transition: 1s cubic-bezier(0.55, 0, 0.44, 1);
