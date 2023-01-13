@@ -14,8 +14,8 @@
   padding: 0.1em 0.25em;
   width: 13em;
   height: 4.2em;
-  background-color: #212121;
-  border: 0.08em solid #fff;
+  background-color: rgba(255, 88, 81, 255);
+  border: 0.08em solid rgb(235, 235, 235);
   border-radius: 0.3em;
   font-size: 12px;
 }
@@ -28,18 +28,18 @@
   bottom: 0.4em;
   width: 8.25em;
   height: 2.5em;
-  background-color: #212121;
+  background-color: rgba(255, 88, 81, 255);
   border-radius: 0.2em;
   font-size: 1.5em;
-  color: #fff;
-  border: 0.08em solid #fff;
-  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+  color: rgb(235, 235, 235);
+  border: 0.08em solid rgb(235, 235, 235);
+  box-shadow: 0 0.4em 0.1em 0.019em rgb(235, 235, 235);
 }
 
 #beli span:hover {
   transition: all 0.5s;
   transform: translate(0, 0.4em);
-  box-shadow: 0 0 0 0 #fff;
+  box-shadow: 0 0 0 0 rgb(235, 235, 235);
 }
 
 #beli span:not(hover) {
