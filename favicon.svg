@@ -12,15 +12,4 @@
 	<g id="Layer 1">
 		<path id="&lt;Path&gt;" class="s0" d="m3000 0.5v6.2l-172.8 170.1h-1059.9v341.7h712.6l-179.2 176.3-676.6 665.7-125.7 123.7-125.7-123.7-671-660.3-179.2-176.3h710.5v-347.1h-1063.3l-169.4-166.7v-9.6h1409v699.7h-456.3l545.4 536.7 550.9-542.1h-458.3v-694.3z"/>
 	</g>
-	<!-- <style>
-		path {
-			stroke: black;
-		}
-
-		@media (prefers-color-scheme: dark) {
-			path {
-				stroke: white;
-			}
-		}
-	</style> -->
 </svg>

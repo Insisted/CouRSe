@@ -8,24 +8,6 @@
   <title>CouRSe - Rio and Steven Course</title>
   <link rel="icon" type="images/svg" href="favicon.svg" media="(prefers-color-scheme: light)" />
   <link rel="icon" type="images/svg" href="favicon-light.svg" media="(prefers-color-scheme: dark)" />
-  <!-- Bootstrap CSS v5.2.1
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-    <script
-      src="./https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="./https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script> -->
 
   <link rel="stylesheet" href="./assets/style.css" />
   <link rel="stylesheet" href="./assets/carousel.css" />
@@ -73,7 +55,7 @@
   <div class="content" id="about_scroll">
     <h2>Apa Itu CouRSe?</h2>
     <p id="pengenalan" style="text-align: justify">
-      Course merupakan situs atau platfrom pembelajaran yang dapat digunakan
+      CouRSe merupakan situs atau platfrom pembelajaran yang dapat digunakan
       dengan cara melakukan <i>purchasing</i> terlebih dahulu. Setelah
       <i>purchasing</i> berhasil, mentor kami akan melakukan pembelajaran
       melalui sistem <i>daring</i> atau <i>online</i>. Lorem ipsum dolor sit
@@ -279,7 +261,7 @@
         <div class="card-info">
           <div class="card-avatar"><img src="./images/Rio.png" /></div>
           <div class="card-title">Rio Ferdynand</div>
-          <div class="card-subtitle">Mentor<br />Design and Music Expert</div>
+          <div class="card-subtitle">Mentor<br />Design and Music<br />Expert</div>
         </div>
         <ul class="card-social">
           <li class="card-social-item">
@@ -295,7 +277,7 @@
           <div class="card-avatar"><img src="./images/Steven.png" /></div>
           <div class="card-title">Steven Tribethran</div>
           <div class="card-subtitle">
-            Mentor<br />Programming and Media Expert
+            Mentor<br />Programming and Media<br />Expert
           </div>
         </div>
         <ul class="card-social">
@@ -405,19 +387,11 @@
   const l_scroll_style = document.getElementById("logos_scroll").style;
   const go_top_style = document.getElementById("go_top").style;
 
-  $(".card_kursus").hover(function () {
-    $(".card_kursus").removeClass("active_kursus");
-    $(this).addClass("active_kursus");
+  const formatter = new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
   });
-
-  $(".add-cart").hover(
-    function () {
-      $(".span_show").css("opacity", "1");
-    },
-    function () {
-      $(".span_show").css("opacity", "0");
-    }
-  );
 
   document.onreadystatechange = () =>
     setTimeout(function () {
@@ -446,6 +420,22 @@
     go_top_style.opacity = cek ? "0" : "1";
   });
 
+
+
+  $(".card_kursus").hover(function () {
+    $(".card_kursus").removeClass("active_kursus");
+    $(this).addClass("active_kursus");
+  });
+
+  $(".add-cart").hover(
+    function () {
+      $(".span_show").css("opacity", "1");
+    },
+    function () {
+      $(".span_show").css("opacity", "0");
+    }
+  );
+
   const list_cart = {};
   const course = {
     "3D Modelling": { harga: 1000000 },
@@ -457,8 +447,6 @@
   };
 
   let order = {};
-  let button_beli = '';
-
   const cart_el = $(".card-cart");
   const cart = [...cart_el].map((div) => div.id);
   cart.forEach((key, i) => (list_cart[key] = Object.keys(course)[i]));
@@ -483,18 +471,18 @@
     var harga = Object.values(order);
 
     Object.keys(order).forEach((x) =>
-      orderan.push(`<a href="#kursus_scroll">${x}: ${order[x]}</a>`)
+      orderan.push(`<a href="#kursus_scroll">${x}: ${formatter.format(order[x])}</a>`)
     );
+
+    total_harga = harga.reduce((x, y) => x + y);
 
     dropdown.innerHTML =
       orderan.join("") +
-      `<a href="#kursus_scroll" style="margin-top: 0.5rem;">Total: ${harga.reduce(
-        (x, y) => x + y
-      )}</a><div class="center-grid"><button id="beli"><span>Beli</span></button></div>`;
+      `<a href="#kursus_scroll" style="margin-top: 0.5rem;">Total: ${formatter.format(total_harga)}</a><div class="center-grid"><button id="beli"><span>Beli</span></button></div>`;
 
     $("#beli").click(function () {
       alert(
-        `Terima kasih telah berbelanja di website kami.\nTotal Belanja anda adalah: ${harga}`
+        `Terima kasih telah berbelanja di website kami.\nTotal Belanja anda adalah: ${formatter.format(total_harga)}`
       );
       order = {}
 

@@ -2,8 +2,8 @@
 	<title>vecteezy_simple-r-and-s-logo-illustration-suitable-for-brand-logos_9889823-ai</title>
 	<defs>
 		<radialGradient id="g1" cx="1500.2" cy="742.3" r="1499.8" gradientUnits="userSpaceOnUse">
-			<stop offset="0" stop-color="#000000"/>
-			<stop offset="1" stop-color="#000000"/>
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#ffffff"/>
 		</radialGradient>
 	</defs>
 	<style>
