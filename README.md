@@ -1,7 +1,7 @@
-# Pemrograman-Web-1-Proj
+# CouRSe - Rio and Steven Course
 Private Repository to Collab with my friend and build a Course page (Now Public)
 
-1. Steven Tribethran (2125250015)
-2. Rio Ferdynand (2125250019)
+1. Steven Tribethran
+2. Rio Ferdynand
 
 Nama Web: CouRSe - Rio and Steven Course
